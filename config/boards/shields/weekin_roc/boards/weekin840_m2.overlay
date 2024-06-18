@@ -1,13 +1,13 @@
 #include <dt-bindings/led/led.h>
 
 &pinctrl {
-    spi3_default: spi3_default {
+    spi1_default: spi1_default {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
         };
     };
 
-    spi3_sleep: spi3_sleep {
+    spi1_sleep: spi1_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
             low-power-enable;
@@ -19,6 +19,11 @@
 &spi1 {
 	compatible = "nordic,nrf-spim";
 	status = "okay";
+
+	pinctrl-0 = <&spi1_default>;
+	pinctrl-1 = <&spi1_sleep>;
+	pinctrl-names = "default", "sleep";
+
 	mosi-pin = <6>;
 	// Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
 	sck-pin = <5>;
