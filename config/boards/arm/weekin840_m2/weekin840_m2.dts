@@ -71,6 +71,7 @@
 	rx-pin = <8>;
 };
 */
+
 &usbd {
 	compatible = "nordic,nrf-usbd";
 	status = "okay";
