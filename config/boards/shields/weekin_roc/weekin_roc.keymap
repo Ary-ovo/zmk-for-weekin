@@ -127,7 +127,7 @@ ____       ____       ____       ____                                           
 &rgb_ug RGB_BRD &rgb_ug RGB_SAD  &rgb_ug RGB_HUD &rgb_ug RGB_EFR none none none M_LCLK M_MCLK M_RCLK none none none none
 none none none none none none none none none none none none none
 none none none none none &bootloader none none none none none none
-none none none             none              none none none none
+&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2             &bt BT_CLR              none none none none
       >;
     };
 
